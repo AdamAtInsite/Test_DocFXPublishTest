@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/a/Test_DocFXPublishTest/Test_DocFXPublishTest/docfx_project",
+  "source_base_path": "/github/workspace/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "p/or2Jx8seW95YbBwmxwK3mMctvn4MtnOB5RvJ1oK7Y="
+          "hash": "8NMvuplcGZ7et/ewJvhVWA=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "tGMcwYLIXX11i+5fqgAC8sKnCXJoEsdyZLWAidUBcVQ="
+          "hash": "mkeupQc1KPUneNHJ9JAtYA=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+          "hash": "gB8AESyvNru97tzIZofEEg=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "CMjCKbSNNrb7ijHl6TUw9vImOznthZAv4kANKSzNrcA="
+          "hash": "YUqL0N/Gdg44ZCUUYBapkg=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "4TEgJl9AhuPIoP9weFbgLuRejAX7WRouRdNP0UiX0nY="
+          "hash": "IGK1ZSYI4NbShXZSeUUd6Q=="
         }
       },
       "is_incremental": false,
