@@ -3,9 +3,9 @@
     {
       "src": [
         {
-			"src": "../",
+		  "src": "../",
           "files": [
-            "Test_DocFXPublishTest/**.csproj"
+            "**.csproj"
           ]
         }
       ],
@@ -53,7 +53,7 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default, templates/material"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
