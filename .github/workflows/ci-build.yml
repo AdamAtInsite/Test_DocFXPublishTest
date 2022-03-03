@@ -17,48 +17,22 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [windows-latest]
     name: CI Build
+    
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
-
-    - name: Restore Dependencies
-      run: dotnet restore Test_DocFXPublishTest.sln
-
-    - name: Build
-      run: dotnet build Test_DocFXPublishTest.sln --configuration Release --no-restore
-
-    - name: Test
-      run: dotnet test Test_DocFXPublishTest.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage
-
-    - name: Copy Coverage To Predictable Location
-      run: cp coverage/**/coverage.cobertura.xml coverage.cobertura.xml
-
-    - name: Coverage Summary Report
-      uses:  irongut/CodeCoverageSummary@v1.2.0
-      with:
-        filename: coverage.cobertura.xml
-        badge: true
-        format: 'md'
-        output: 'both'
-
-    - name: Add Coverage PR Comment
-      uses: marocchino/sticky-pull-request-comment@v2
-      if: github.event_name == 'pull_request'
-      with:
-        recreate: true
-        path: code-coverage-results.md
-
-    - name: Upload Coverage Artifact
-      uses: actions/upload-artifact@v2.3.0
-      with:
-        name: test-coverage-report
-        path: |
-          coverage.cobertura.xml
-          code-coverage-results.md
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+      
+    - name: Restore Nuget packages
+      run: nuget restore Test_DocFXPublishTest.sln
+      
+    - name: Restore Nuget packages
+      run: msbuild Test_DocFXPublishTest.sln
+      
